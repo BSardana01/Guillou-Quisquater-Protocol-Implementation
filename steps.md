@@ -15,15 +15,4 @@ Step 6: At the end, the verifier computes two values from all the data received 
 First value: (enc**e) % n
 Second value: (random_val_enc*ciphertext**r) % n
 
-If these two values are found equal, the prover has successfully proven that they know the plaintext. This is because,
-
-(random_val_enc) * (ciphertext)^r = (random_val)^e * ((plaintext)^e)^r = 
-
-	random_val^e * plaintext^(er)
-
-enc^e = ((random_val) * (plaintext)^r)^e = random_val^e * plaintext^(re)
-=
-
-random_val^e * plaintext^(re)
-
-These two values are supposed to be equal and if they come out to be equal with the data provided by the prover, the prover must’ve known the secret used to compute them in the first place.
+If these two values are found equal, the prover has successfully proven that they know the plaintext.
